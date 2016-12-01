@@ -1,4 +1,5 @@
 # refer https://www.justinribeiro.com/chronicle/2014/10/22/mosquitto-libwebsockets-google-compute-engine-setup/
+# refer if libmosquitto occurs linkerror: http://stackoverflow.com/questions/30861974/mosquitto-pub-error-while-loading-shared-libraries-libmosquitto-so-1-cannot-o
 
 c_path=`pwd`
 
@@ -31,3 +32,8 @@ sudo sh -c "echo protocol websockets >> /etc/mosquitto/mosquitto.conf"
 
 cd $c_path
 sudo rm -rf libwebsockets-1.3-chrome37-firefox30 v1.3-chrome37-firefox30.tar.gz mosquitto-1.4.4 mosquitto-1.4.4.tar.gz
+
+if [ ! -f /etc/ld.so.conf.d/local.conf ]; then
+  sudo sh -c "echo /usr/local/lib > /etc/ld.so.conf.d/local.conf"
+  sudo /sbin/ldconfig
+fi
