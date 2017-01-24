@@ -3,6 +3,9 @@
 
 c_path=`pwd`
 
+# cmake in case
+sudo apt-get install cmake
+
 # libwebsokets-dev is unmatch with mosquitto.
 #sudo apt-get install uuid-dev libwebsockets-dev libssl-dev libc-ares-dev
 sudo apt-get install uuid-dev libssl-dev libc-ares-dev
