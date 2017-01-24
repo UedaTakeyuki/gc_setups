@@ -3,6 +3,9 @@
 
 c_path=`pwd`
 
+# cmake in case
+sudo apt-get install cmake
+
 # libwebsokets-dev is unmatch with mosquitto.
 #sudo apt-get install uuid-dev libwebsockets-dev libssl-dev libc-ares-dev
 sudo apt-get install uuid-dev libssl-dev libc-ares-dev
@@ -24,7 +27,7 @@ wget https://mosquitto.org/files/source/mosquitto-1.4.4.tar.gz
 tar -xvzf mosquitto-1.4.4.tar.gz
 cd mosquitto-1.4.4
 sudo sed -i 's|^WITH_WEBSOCKETS:=no|WITH_WEBSOCKETS:=yes|' config.mk
-make binary
+sudo make binary
 sudo make install
 sudo sh -c "echo listener 1883 >> /etc/mosquitto/mosquitto.conf"
 sudo sh -c "echo listener 9000 127.0.0.1 >> /etc/mosquitto/mosquitto.conf"
