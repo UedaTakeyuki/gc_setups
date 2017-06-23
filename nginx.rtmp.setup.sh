@@ -1,3 +1,5 @@
+sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev
+
 git clone https://github.com/arut/nginx-rtmp-module.git
 
 wget https://nginx.org/download/nginx-1.10.3.tar.gz
