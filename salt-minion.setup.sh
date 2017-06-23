@@ -6,4 +6,4 @@ sudo sh -c "echo 'APT::Default-Release "jessie";' > /etc/apt/apt.conf.d/10apt"
 sudo apt-get update
 
 sudo apt-get install python-systemd/jessie-backports python-zmq python-tornado/stretch salt-common/stretch
-sudo apt-get insall salt-minion/stretch
+sudo apt-get install salt-minion/stretch
