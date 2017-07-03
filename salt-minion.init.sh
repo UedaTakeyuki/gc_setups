@@ -5,12 +5,14 @@ fi
 master=$1
 serial=`python -m piserialnumber`
 
-# rpurge previous salt
-sudo apt-get purge salt-common salt-minion
-sudo rm -rf /etc/salt
+# remove key files
+sudo rm /etc/salt/pki/minion/minion_master.pub
+sudo rm /etc/salt/pki/minion/minion.pem
+sudo rm /etc/salt/pki/minion/minion.pub
 
-# reinstall salt-common & salt-minion
-sudo apt-get install salt-common/stretch salt-minion/stretch
+# make new key file
+sudo openssl genrsa 2048 > /etc/salt/pki/minion/minion.pem
+sudo openssl rsa -in /etc/salt/pki/minion/minion.pem -pubout -out /etc/salt/pki/minion/minion.pub
 
 # settings
 sudo sed -i "s/#master: salt/master: ${master}/" /etc/salt/minion
