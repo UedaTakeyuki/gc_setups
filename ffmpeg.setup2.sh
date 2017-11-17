@@ -31,7 +31,8 @@ cd ..
 #cd ..
 
 # ffmpeg
-sudo apt-get install pkg-config yasm lib-dev
+# refer http://www.ffmpeg-archive.org/ERROR-OMX-Core-h-header-not-found-td4681495.html for omx
+sudo apt-get install pkg-config yasm libomxil-bellagio-dev
 git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
 cd ffmpeg
 #./configure --enable-gpl --enable-libx264 --enable-nonfree\
