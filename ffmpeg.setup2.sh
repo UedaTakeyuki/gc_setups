@@ -48,3 +48,6 @@ cd ffmpeg
 ./configure --enable-gpl --enable-libx264 --enable-nonfree --enable-mmal --enable-omx-rpi --enable-omx --extra-libs=-ldl
 make -j4
 sudo make install
+
+# for tell the path of .so
+sudo ldconfig
