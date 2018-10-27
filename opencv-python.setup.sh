@@ -1,4 +1,8 @@
-pip3 install opencv-python
+sudo pip3 install opencv-python
+
+sudo apt install liblapack3
+sudo apt install libcblas3
+sudo apt install libatlas3-base
 
 # https://qiita.com/atuyosi/items/5f73baa08c3408f248e8
 sudo apt install libhdf5-100
