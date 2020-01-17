@@ -1,4 +1,5 @@
 ver=1.13.5
+#ver=1.12
 file=go${ver}.linux-armv6l.tar.gz
 
 #wget https://golang.org/dl/go1.10.3.linux-armv6l.tar.gz
