@@ -1,4 +1,4 @@
-ver=1.13.5
+ver=1.13.7
 #ver=1.12
 file=go${ver}.linux-armv6l.tar.gz
 
