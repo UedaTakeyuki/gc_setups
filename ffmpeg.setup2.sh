@@ -1,6 +1,8 @@
 c_path=`pwd`
 # x264
-git clone git://git.videolan.org/x264
+git clone https://code.videolan.org/videolan/x264.git
+# moved to gitlab
+#git clone git://git.videolan.org/x264
 cd x264
 #./configure --prefix=${c_path}/output --enable-static  --disable-opencl
 #./configure --prefix=${c_path}/output --enable-shared --disable-opencl
