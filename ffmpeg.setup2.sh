@@ -47,7 +47,10 @@ cd ffmpeg
 #            --extra-ldflags="-L${c_path}/output/lib"\
 #            --extra-libs=-ldl
 #./configure --enable-gpl --enable-libx264 --enable-nonfree --extra-libs=-ldl
-./configure --enable-gpl --enable-libx264 --enable-nonfree --enable-mmal --enable-omx-rpi --enable-omx --extra-libs=-ldl
+
+# --enable-shared and -fPIC is for pyav, refer https://github.com/mikeboers/PyAV/issues/510
+#
+./configure --enable-shared --enable-gpl --enable-libx264 --enable-nonfree --enable-mmal --enable-omx-rpi --enable-omx --extra-libs=-ldl
 make -j4
 sudo make install
 
