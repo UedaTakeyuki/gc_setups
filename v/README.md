@@ -1,7 +1,10 @@
 # V language
 
 ## Install command
-```v.setup.sh```
+```bash:
+Usage: ./v.setup.sh [-n] 
+  [-n]:   Don't install glfw. For CUI env.
+```
 
 ## confirmed raspbian version (uname -a)
 - Linux raspberrypi 4.19.50+ #896 Thu Jun 20 16:09:52 BST 2019 armv6l GNU/Linux
