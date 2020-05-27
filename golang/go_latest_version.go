@@ -18,6 +18,7 @@ func main() {
 	//		fmt.Println(link.Text(), "| Link :", link.Attrs()["href"])
 	//	}
 	//	version := soup.find('div', class_='toggleVisible')['id']
-	version := doc.Find("div.toggleVisible").Attrs()["id"]
+	//	version := doc.Find("div.toggleVisible").Attrs()["id"]
+	version := doc.Find("div.toggleVisible").Text()
 	fmt.Println(version)
 }
