@@ -1,14 +1,28 @@
-ver=1.13.7
-#ver=1.12
-file=go${ver}.linux-armv6l.tar.gz
+# Install Beautifulsoup4
+pip3 install beautifulsoup4
 
-#wget https://golang.org/dl/go1.10.3.linux-armv6l.tar.gz
+# get latest golang version
+ver=`python3 go_latest_version.py`
+echo Install $ver
+
+file=${ver}.linux-armv6l.tar.gz
+
 wget https://golang.org/dl/${file}
-#sudo tar -C /usr/local -xzf go1.10.3.linux-armv6l.tar.gz
 sudo tar -C /usr/local -xzf ${file}
-#rm go1.10.3.linux-armv6l.tar.gz
 rm ${file}
 
+if [[ ! "$PATH" =~ /usr/local/go/bin ]]; then
+  cat << EOF >>~/.profile
+
+# set PATH so it includes go bin if it exists
+if [ -d "/usr/local/go/bin" ] ; then
+    PATH="/usr/local/go/bin:$PATH"
+fi
+EOF
+
+  echo do source ~/.profile to set go in path.
+
+fi
 
 ## add export to /etc/profile (for system-wide use) or ~/.profiley
 #export PATH=$PATH:/usr/local/go/bin
