@@ -14,4 +14,4 @@ obfuscator-llvm.setup.sh
 ## references
 - [github](https://github.com/MaxXor/obfuscator-llvm)
 - [wiki](https://github.com/obfuscator-llvm/obfuscator/wiki)
-
+- [論文紹介："Obfuscator-LLVM" 大衆のためのソフトウェア保護](https://qiita.com/UedaTakeyuki/items/4dd32bee474433af4b6e)
