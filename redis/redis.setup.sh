@@ -1,7 +1,7 @@
 # sudo apt-get -y install redis
 # sudo apt-get -y autoremove redis
 # sudo apt-get -y remove redis-server redis-tools zlib1g-dev
-
+# http://grainier.net/how-to-uninstall-redis-server-from-ubuntu/
 
 # https://redis.io/topics/quickstart
 
