@@ -16,7 +16,8 @@ sudo cp utils/redis_init_script /etc/init.d/redis_6379
 sudo cp redis.conf /etc/redis/6379.conf
 sudo mkdir /var/redis/6379
 sudo update-rc.d redis_6379 defaults
-sudo /etc/init.d/redis_6379 start
 cd ..
 rm -rf redis-stable.tar.gz
 rm -rf redis-stable
+
+sudo /etc/init.d/redis_6379 start &
