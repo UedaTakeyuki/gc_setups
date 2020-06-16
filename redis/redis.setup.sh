@@ -1,3 +1,4 @@
+
 # sudo apt-get -y install redis
 # sudo apt-get -y autoremove redis
 # sudo apt-get -y remove redis-server redis-tools zlib1g-dev
@@ -19,5 +20,3 @@ sudo update-rc.d redis_6379 defaults
 cd ..
 rm -rf redis-stable.tar.gz
 rm -rf redis-stable
-
-sudo /etc/init.d/redis_6379 start &
