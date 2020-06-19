@@ -1,8 +1,9 @@
 # Install Beautifulsoup4
-pip3 install beautifulsoup4
+#pip3 install beautifulsoup4
 
 # get latest golang version
-ver=`python3 go_latest_version.py`
+#ver=`python3 go_latest_version.py`
+ver=`./go_latest_version`
 echo Install $ver
 
 file=${ver}.linux-armv6l.tar.gz
