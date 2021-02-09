@@ -21,6 +21,17 @@ install_v(){
 	# https://github.com/vlang/v
 	git clone https://github.com/vlang/v ~/v
 	cd ~/v
+
+	# added at 2021.02.11
+	# https://github.com/vlang/v/issues/7654
+	cd thirdparty
+	git clone git://repo.or.cz/tinycc.git
+	mv tinycc tcc
+	cd tcc 
+	./configure --prefix=/var/tmp/tcc --crtprefix=/var/tmp/tcc/lib:/usr/lib64:/usr/lib/arm-linux-gnueabihf --libpaths=/var/tmp/tcc/lib:/usr/lib/arm-linux-gnueabihf:/usr/lib64:/usr/lib:/lib/arm-linux-gnueabihf:/lib:/usr/local/lib/arm-linux-gnueabihf:/usr/local/lib --debug
+	cd ..
+	cd ..
+
 	make
 	sudo ./v symlink
 }
