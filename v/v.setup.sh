@@ -59,3 +59,6 @@ install_v
 if ! $NOGL ; then
   install_glfw
 fi
+
+sudo apt-get install libxi-dev libxcursor-dev
+
