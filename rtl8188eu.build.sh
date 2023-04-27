@@ -4,8 +4,8 @@
 # https://qiita.com/nuruposan/items/84a8d6bc1911b32a915e
 
 # https://github.com/ivanovborislav/rtl8188eu
-#sudo apt-get install bc build-essential
-#sudo sh -c "git clone https://github.com/ivanovborislav/rtl8188eu.git /usr/src/rtl8188eu-$(uname -r)"
+sudo apt-get install bc build-essential
+sudo sh -c "git clone https://github.com/ivanovborislav/rtl8188eu.git /usr/src/rtl8188eu-$(uname -r)"
 sudo apt-get install dkms
 cd /usr/src/rtl8188eu-$(uname -r)
 sudo sh -c "sed -i 's@CONFIG_PLATFORM_I386_PC = y@CONFIG_PLATFORM_I386_PC = n@' Makefile"
