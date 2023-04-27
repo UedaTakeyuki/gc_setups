@@ -5,6 +5,8 @@
 
 # https://github.com/ivanovborislav/rtl8188eu
 sudo apt-get install bc build-essential
+git clone https://github.com/RPi-Distro/rpi-source
+rpi-source/rpi-source
 sudo sh -c "git clone https://github.com/ivanovborislav/rtl8188eu.git /usr/src/rtl8188eu-$(uname -r)"
 sudo apt-get install dkms
 cd /usr/src/rtl8188eu-$(uname -r)
