@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kernel=5.10.103+
+kernel=5.10.103-v7+
 driver=8188eu
 
 module_bin="$driver.ko"
