@@ -8,7 +8,9 @@ sudo apt-get install bc build-essential dkms
 sudo sh -c "echo blacklist r8188eu > /etc/modprobe.d/50-8188eu.conf"
 
 # clone rtl8188eus
-git clone https://github.com/aircrack-ng/rtl8188eus.git
+# avoid https://github.com/aircrack-ng/rtl8188eus/issues/234
+# git clone https://github.com/aircrack-ng/rtl8188eus.git
+git clone https://github.com/gglluukk/rtl8188eus.git
 
 # build
 cd rtl8188eus
