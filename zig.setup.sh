@@ -25,6 +25,9 @@ esac
 # download JSON version release note
 wget https://ziglang.org/download/index.json -O /tmp/zigjson
 
+# install jq
+$(dirname $0)/jq.setup.sh
+
 # get version string from downloaded JSON version release note
 version=$(cat /tmp/zigjson | jq '.master.version' | tr -d '"')
 zig_path=zig-${version}
