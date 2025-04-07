@@ -1,1 +1,1 @@
-sudo apt-get install libjson-glib-dev json-glib-tools
+sudo apt-get install libjson-glib-dev
