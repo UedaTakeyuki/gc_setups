@@ -3,7 +3,7 @@
 usage_exit() {
 	echo "Usage: $0 [-h] [path] " 1>&2
 	echo "  [-?]:   Show this usage." 1>&2
-	echo "  [path]: Install rustling to the path." 1>&2
+	echo "  [path]: Install zig to the path." 1>&2
 	exit 1
 }
 
