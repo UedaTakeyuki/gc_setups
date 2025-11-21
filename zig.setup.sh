@@ -31,10 +31,10 @@ $(dirname $0)/jq.setup.sh
 # get version string from downloaded JSON version release note
 version=$(cat /tmp/zigjson | jq '.master.version' | tr -d '"')
 zig_path=zig-${version}
-zig_expanded=zig-linux-armv7a-${version}
+zig_expanded=zig-arm-linux-${version}
 zig_tarball=${zig_expanded}.tar.xz
 echo $version
-wget $(cat /tmp/zigjson | jq '.master."armv7a-linux".tarball' | tr -d '"') -O $path/${zig_tarball}
+wget $(cat /tmp/zigjson | jq '.master."arm-linux".tarball' | tr -d '"') -O $path/${zig_tarball}
 tar Jxfv $path/${zig_tarball} -C $path
 mv $path/${zig_expanded} $path/${zig_path}
 rm $path/${zig_tarball}
