@@ -10,14 +10,14 @@ usage_exit() {
 case $# in
   0) # install to ~/rustling
      path=~/ziglings
-     git clone https://ziglings.org $path
+     git clone https://codeberg.org/ziglings/exercises.git $path
      ;;
   1) # install to path/rustling
      if [ $1 = "-?" ];then
        usage_exit
      else
        path=$1/ziglings
-       git clone https://ziglings.org $path
+       git clone https://codeberg.org/ziglings/exercises.git $path
      fi
      ;;
   *) usage_exit
