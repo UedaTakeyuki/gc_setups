@@ -1,12 +1,12 @@
 # install required libraries
-sudo apt-get install build-essential libssl-dev zlib1g-dev bison flex
+sudo apt-get install build-essential libssl-dev zlib1g-dev bison flex libsystemd-dev
 
 # clone repository
 git clone https://github.com/postgres/postgres.git
 cd postgres
 
 # build & install
-./configure --prefix=/usr/local/pgsql # set to insall to /usr/local/pgsql
+./configure --prefix=/usr/local/pgsql --with-systemd # set to insall to /usr/local/pgsql, notify sd_notify(3) to systemd
 make
 sudo make install
 
