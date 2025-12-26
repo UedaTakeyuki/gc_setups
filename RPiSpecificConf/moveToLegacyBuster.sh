@@ -4,9 +4,10 @@ awk '{
     if ($0 ~ /http:\/\/raspbian.raspberrypi.org/){
       buff = $0;
       sub("raspbian.raspberrypi.org", "legacy.raspbian.org", buff);
-      print buff "\n# "
+      print buff "\n# " $0
+    } else {
+      print
     }
-    print
   } else {
     print
   }
